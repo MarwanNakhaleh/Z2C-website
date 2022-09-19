@@ -65,7 +65,7 @@ const styles = (theme) => {
     },
     subtitle: {
       opacity: '0.4',
-      paddingBottom: '30px',
+      paddingBottom: '20px',
     },
     largeImage: {
       width: '100%',

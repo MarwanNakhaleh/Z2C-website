@@ -3,7 +3,6 @@ import {
   Box,
   Typography,
   TextField,
-  TextareaAutosize,
   Button,
 } from '@mui/material';
 import useStyles from '../styles/styles';
@@ -11,25 +10,24 @@ import useStyles from '../styles/styles';
 const ContactUs = () => {
   const [email, setEmail] = useState('');
   const [firstName, setFirstName] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
   const classes = useStyles();
 
   const submitForm = (e) => {
     e.preventDefault();
-    console.log({ email, firstName, subject, message });
+    console.log({ email, firstName });
   };
 
   return (
-    <Box className={classes.formContainer}>
+    <Box sx={{flexGrow: 1}} className={classes.formContainer}>
       <Typography variant="h4" className={classes.formHeading}>
-        Contact Us
+        Get a free curated curriculum emailed to you
       </Typography>
       <Box
         className={classes.form}
         component="form"
         noValidate
         autoComplete="off"
+        container display='flex' alignItems='center' justifyContent="center" flexDirection='column'
       >
         <TextField
           label="Full Name"
@@ -47,25 +45,6 @@ const ContactUs = () => {
           className={classes.inputField}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-        />
-
-        <TextField
-          label="Subject"
-          variant="outlined"
-          fullWidth
-          className={classes.inputField}
-          value={subject}
-          onChange={(e) => setSubject(e.target.value)}
-        />
-
-        <TextareaAutosize
-          aria-label="minimum height"
-          minRows={6}
-          placeholder="Enter a message"
-          className={classes.textArea}
-          spellCheck
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
         />
 
         <Button

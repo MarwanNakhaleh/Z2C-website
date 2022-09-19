@@ -1,27 +1,27 @@
 import React from 'react';
 import { Grid, Typography, Button, Box } from '@mui/material';
-import bestTeams from '../images/bestTeams.jpg';
+import learnToCode from '../images/learn-to-code.jpg';
 import useStyles from '../styles/styles';
 
-const AboutUs = () => {
+const DontPayForInfo = ({text}) => {
   const classes = useStyles();
 
   return (
-    <Box className={classes.aboutUsContainer}>
+    <Box className={classes.aboutUsContainer} id="why-us">
       <Grid container spacing={6} className={classes.gridContainer}>
         <Grid item xs={12} md={5}>
-          <img src={bestTeams} alt="My Team" className={classes.largeImage} />
+          <img src={learnToCode} alt="My Team" className={classes.largeImage} />
         </Grid>
 
         <Grid item xs={12} md={6}>
           <Typography variant="h3" fontWeight={700} className={classes.title}>
-            We build, We revive
+            {text["title"]}
           </Typography>
           <Typography className={classes.aboutUsSubtitle}>
-            Your business needs to be in safe hands at all times. We ensure you
-            never run out of customers and not run at loss. We are trusted by
-            over 500+ companies to deliver quality marketing campaigns using
-            Digital marketing & Offline marketing channels.
+            {text["problems"]}
+          </Typography>
+          <Typography className={classes.aboutUsSubtitle}>
+            {text["costs"]}
           </Typography>
           <Button
             variant="contained"
@@ -36,4 +36,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default DontPayForInfo;
