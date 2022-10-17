@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Typography, Button, Box } from "@mui/material";
+import { Grid, Typography, Button, Box, Link } from "@mui/material";
 import frustration from "../images/frustration.jpg";
 import useStyles from "../styles/styles";
 
@@ -7,7 +7,7 @@ const FlexibleBootcamps = ({ text }) => {
   const classes = useStyles();
 
   return (
-    <Box className={classes.aboutUsContainer} id="why-us">
+    <Box className={classes.aboutUsContainer} id="inflexible-bootcamps">
       <Grid container spacing={6} className={classes.gridContainer}>
         <Grid item xs={12} md={6}>
           <Typography variant="h3" fontWeight={700} className={classes.title}>
@@ -25,13 +25,15 @@ const FlexibleBootcamps = ({ text }) => {
           <Typography className={classes.aboutUsSubtitle}>
             {text["thirdProblem"]}
           </Typography>
-          <Button
-            variant="contained"
-            color="primary"
-            sx={{ width: "200px", fontSize: "16px" }}
-          >
-            CONTACT US
-          </Button>
+          <Link href="#get-info" underline="none">
+            <Button
+              variant="contained"
+              color="primary"
+              sx={{ width: "200px", fontSize: "16px" }}
+            >
+              What now?
+            </Button>
+          </Link>
         </Grid>
         <Grid item xs={12} md={5}>
           {/* Photo by Tim Gouw: https://www.pexels.com/photo/man-in-white-shirt-using-macbook-pro-52608/ */}

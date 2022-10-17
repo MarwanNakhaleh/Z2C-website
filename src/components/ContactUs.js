@@ -1,36 +1,39 @@
-import React, { useState } from 'react';
-import {
-  Box,
-  Typography,
-  TextField,
-  Button,
-} from '@mui/material';
-import useStyles from '../styles/styles';
+import React, { useState } from "react";
+import { Box, Typography, TextField, Button } from "@mui/material";
+import useStyles from "../styles/styles";
+
+import { useFormFields, useMailChimpForm } from "use-mailchimp-form";
 
 const ContactUs = () => {
-  const [email, setEmail] = useState('');
-  const [firstName, setFirstName] = useState('');
+  const [email, setEmail] = useState("");
+  const [firstName, setFirstName] = useState("");
   const classes = useStyles();
 
   const submitForm = (e) => {
     e.preventDefault();
-    console.log({ email, firstName });
   };
 
   return (
-    <Box sx={{flexGrow: 1}} className={classes.formContainer}>
+    <Box sx={{ flexGrow: 1 }} className={classes.formContainer} id="get-info">
       <Typography variant="h4" className={classes.formHeading}>
-        Get a free curated curriculum emailed to you
+        Get a FREE curated curriculum right now!
+      </Typography>
+      <Typography className={classes.emailDescription}>
+        Learn all about what to study, how to prepare for your job search, and much more!
       </Typography>
       <Box
         className={classes.form}
         component="form"
         noValidate
         autoComplete="off"
-        container display='flex' alignItems='center' justifyContent="center" flexDirection='column'
+        container
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        flexDirection="column"
       >
         <TextField
-          label="Full Name"
+          label="First Name"
           variant="outlined"
           fullWidth
           className={classes.inputField}
@@ -51,7 +54,7 @@ const ContactUs = () => {
           variant="contained"
           type="submit"
           color="primary"
-          sx={{ width: '200px', fontSize: '16px' }}
+          sx={{ width: "200px", fontSize: "16px" }}
           onClick={submitForm}
         >
           Submit

@@ -1,3 +1,4 @@
+import { CenterFocusStrong } from '@mui/icons-material';
 import { makeStyles } from '@mui/styles';
 
 const styles = (theme) => {
@@ -125,6 +126,11 @@ const styles = (theme) => {
     testimonialPosition: {
       fontSize: '14px',
       opacity: '0.6',
+    },
+    emailDescription: {
+      opacity: '0.7',
+      textAlign: "center",
+      marginTop: "20px"
     },
   };
 };

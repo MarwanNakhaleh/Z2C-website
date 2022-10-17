@@ -18,24 +18,13 @@ const Hero = () => {
             bootcamp only to teach yourself information you can find for free
             online.
           </Typography>
-          {/* <Typography variant="h6" className={classes.subtitle}>
-            We're going to give you a curated list of free courses and tutorials
-            such that if you complete all of the given material, you will know
-            enough to begin looking for your first high-paying software engineer
-            job.
-          </Typography>
-          <Typography variant="h6" className={classes.subtitle}>
-            We're going to give you that information <b>for free</b>. Just
-            provide us with your email address to receive the PDF of the curated
-            learning material.
-          </Typography> */}
           <Link href="#why-us" underline="none">
             <Button
               variant="contained"
               color="primary"
-              sx={{ width: "200px", fontSize: "16px" }}
+              sx={{ width: "250px", fontSize: "16px" }}
             >
-              Learn more
+              That sounds good!
             </Button>
           </Link>
         </Grid>
